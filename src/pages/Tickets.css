@@ -1,0 +1,507 @@
+.tickets-page {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+.tickets-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 24px;
+}
+
+.tickets-header h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.tickets-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  padding: 0 24px;
+}
+
+/* Capacity Panel */
+.capacity-panel {
+  padding: 24px;
+  height: fit-content;
+}
+
+.capacity-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.capacity-graph {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+
+.graph-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 8px;
+  width: 10%;
+}
+
+.graph-bar {
+  width: 100%;
+  background: var(--light-blue);
+  border-radius: 4px 4px 0 0;
+  transition: height 1s ease;
+}
+
+.graph-bar.high {
+  background: var(--accent-red);
+}
+
+.graph-bar-container span {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.graph-legend {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Booking Panel */
+.booking-panel {
+  padding: 32px;
+  min-height: 400px;
+}
+
+.booking-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 16px;
+}
+
+.ticket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.ticket-item:hover {
+  border-color: var(--primary-blue);
+}
+
+.ticket-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.ticket-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.ticket-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ticket-price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+}
+
+.selected-summary {
+  background: rgba(36, 67, 105, 0.05);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--accent-red);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.payment-demo-text {
+  color: #f57c00;
+  background: #fff3e0;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+}
+
+.total-price {
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+}
+
+.total-price span {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.step-4 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0;
+}
+
+@media (max-width: 900px) {
+  .tickets-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .ticket-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .ticket-action {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.step-header-with-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 16px;
+}
+
+.step-header-with-cart h2 {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary.added {
+  background-color: #4caf50;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+}
+
+.empty-cart p {
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  margin-bottom: 24px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.cart-item-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.cart-item-info span {
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: rgba(36, 67, 105, 0.05);
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cart-total-box .total-amount {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-actions.right {
+  justify-content: flex-end;
+}
+
+.form-actions.spread {
+  justify-content: space-between;
+}
+
+/* Accordion & Configurator */
+.accordion-item {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item.expanded {
+  border-color: var(--primary-blue);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+}
+
+.accordion-header:hover {
+  background: rgba(36, 67, 105, 0.02);
+}
+
+.accordion-title-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.accordion-title-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn-outline-small {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.accordion-item.expanded .btn-outline-small {
+  background: rgba(36, 67, 105, 0.1);
+}
+
+.accordion-body {
+  padding: 20px;
+  background: rgba(0,0,0,0.02);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.config-section {
+  margin-bottom: 24px;
+}
+
+.config-section h5 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: var(--primary-blue);
+}
+
+.duration-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dur-btn {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #444;
+  transition: all 0.2s;
+}
+
+.dur-btn:hover {
+  border-color: var(--primary-blue);
+}
+
+.dur-btn.active {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.persons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.person-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.person-label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter-controls button {
+  background: rgba(36, 67, 105, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-blue);
+}
+
+.counter-controls button:hover {
+  background: rgba(36, 67, 105, 0.2);
+}
+
+.counter-val {
+  font-weight: bold;
+  min-width: 16px;
+  text-align: center;
+}
+
+.config-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin-top: 8px;
+}
+
+.calc-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.calc-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-red);
+}
+
+.cart-item-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-item-price {
+  font-weight: bold;
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+}
+
+.cart-item-desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
