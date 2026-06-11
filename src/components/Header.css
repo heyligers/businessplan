@@ -158,6 +158,12 @@
 }
 
 @media (max-width: 1024px) {
+  .header-inner {
+    gap: 16px;
+    padding: 12px 16px;
+    justify-content: space-between;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -187,5 +193,28 @@
 
   .weather-widget {
     display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  
+  .logo-title {
+    font-size: 1.1rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.65rem;
+  }
+  
+  .header-actions {
+    gap: 12px;
+  }
+  
+  .btn-primary {
+    padding: 8px 12px;
   }
 }
