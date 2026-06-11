@@ -9,6 +9,7 @@ import ParkMap from './pages/ParkMap';
 import FAQ from './pages/FAQ';
 import Weather from './pages/Weather';
 import Events from './pages/Events';
+import Contest from './pages/Contest';
 import ScrollToTop from './components/ScrollToTop';
 import PasswordProtect from './components/PasswordProtect';
 import { LanguageProvider } from './context/LanguageContext';
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/tickets" element={<Tickets />} />
                 <Route path="/events" element={<Events />} />
+                <Route path="/contest" element={<Contest />} />
                 <Route path="/attraction/:id" element={<AttractionDetail />} />
                 <Route path="/legal/:page" element={<Legal />} />
                 <Route path="/map" element={<ParkMap />} />

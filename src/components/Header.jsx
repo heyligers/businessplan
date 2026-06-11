@@ -26,6 +26,7 @@ export default function Header() {
         <nav className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <Link to="/" className="nav-item" onClick={closeMenu}>{t('nav_park')}</Link>
           <Link to="/events" className="nav-item" onClick={closeMenu}>{t('nav_events')}</Link>
+          <Link to="/contest" className="nav-item" onClick={closeMenu} style={{ color: '#F6C845', fontWeight: 'bold' }}>{t('nav_contest')}</Link>
           <Link to="/tickets" state={{ resetCart: true }} className="nav-item" onClick={closeMenu}>{t('nav_tickets')}</Link>
           <a href="#footer" className="nav-item" onClick={closeMenu}>{t('nav_infos')}</a>
         </nav>

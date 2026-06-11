@@ -124,7 +124,16 @@ const translations = {
     ev_3_title: "Capture the Flag auf dem Wibit",
     ev_3_date: "Jeden 3. Samstag im Monat",
     ev_3_desc: "Action pur! Zwei Teams treten auf dem riesigen Wibit Hindernisparcours gegeneinander an. Taktik, Schnelligkeit und Balance sind gefragt, um die Flagge zu erobern.",
-    btn_join_event: "Jetzt anmelden"
+    btn_join_event: "Jetzt anmelden",
+    nav_contest: "Gewinnspiel",
+    contest_title: "Großes Eröffnungs-Gewinnspiel",
+    contest_subtitle: "Gewinne eine Reise zum Europa-Park in Rust!",
+    contest_desc: "Die Person, die in den ersten drei Monaten nach Eröffnung unseres Parks ein Instagram-Reel oder TikTok mit den meisten Views/Likes macht, gewinnt eine Reise zum Europa-Park in Rust inkl. Hotel und Anreise!",
+    contest_rules_title: "So machst du mit:",
+    contest_rule_1: "Besuche den Europa-Park Istanbul und mache ein cooles Video.",
+    contest_rule_2: "Poste es als Reel auf Instagram oder auf TikTok.",
+    contest_rule_3: "Markiere unseren offiziellen Account in deinem Post.",
+    contest_rule_4: "Sammle so viele Views und Likes wie möglich!"
   },
   en: {
     nav_park: "Park & Attractions",
@@ -247,7 +256,16 @@ const translations = {
     ev_3_title: "Capture the Flag on Wibit",
     ev_3_date: "Every 3rd Saturday of the month",
     ev_3_desc: "Pure action! Two teams compete on the massive Wibit obstacle course. Tactics, speed, and balance are required to capture the flag.",
-    btn_join_event: "Register Now"
+    btn_join_event: "Register Now",
+    nav_contest: "Contest",
+    contest_title: "Grand Opening Contest",
+    contest_subtitle: "Win a trip to Europa-Park in Rust!",
+    contest_desc: "The person who makes an Instagram Reel or TikTok with the most views/likes in the first three months after the opening of our park wins a trip to Europa-Park in Rust incl. hotel and travel!",
+    contest_rules_title: "How to enter:",
+    contest_rule_1: "Visit Europa-Park Istanbul and make a cool video.",
+    contest_rule_2: "Post it as a Reel on Instagram or on TikTok.",
+    contest_rule_3: "Tag our official account in your post.",
+    contest_rule_4: "Collect as many views and likes as possible!"
   },
   tr: {
     nav_park: "Park & Eğlence",
@@ -370,7 +388,16 @@ const translations = {
     ev_3_title: "Wibit'te Bayrağı Yakala",
     ev_3_date: "Her ayın 3. Cumartesi günü",
     ev_3_desc: "Saf aksiyon! İki takım devasa Wibit engel parkurunda yarışıyor. Bayrağı yakalamak için taktik, hız ve denge gerekiyor.",
-    btn_join_event: "Şimdi Kaydol"
+    btn_join_event: "Şimdi Kaydol",
+    nav_contest: "Yarışma",
+    contest_title: "Büyük Açılış Yarışması",
+    contest_subtitle: "Rust'taki Europa-Park'a seyahat kazan!",
+    contest_desc: "Parkımızın açılışından sonraki ilk üç ay içinde en çok izlenme/beğeni alan bir Instagram Reel veya TikTok yapan kişi, Rust'taki Europa-Park'a otel ve seyahat dahil bir gezi kazanıyor!",
+    contest_rules_title: "Nasıl katılınır:",
+    contest_rule_1: "Europa-Park İstanbul'u ziyaret et ve harika bir video çek.",
+    contest_rule_2: "Bunu Instagram'da bir Reel veya TikTok'ta paylaş.",
+    contest_rule_3: "Gönderinde resmi hesabımızı etiketle.",
+    contest_rule_4: "Mümkün olduğunca çok izlenme ve beğeni topla!"
   }
 };
 

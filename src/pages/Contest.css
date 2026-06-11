@@ -1,0 +1,233 @@
+.contest-page {
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contest-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .contest-hero {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contest-text-content {
+  flex: 1;
+}
+
+.contest-title {
+  color: var(--primary-blue, #005f9e);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sparkle-icon {
+  color: #F6C845;
+}
+
+.contest-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-red, #e3000f);
+  margin-bottom: 24px;
+}
+
+.contest-desc {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.contest-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.insta-frame {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  border: 1px solid #efefef;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transform: rotate(2deg);
+  transition: transform 0.3s ease;
+}
+
+.insta-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.insta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #efefef;
+}
+
+.insta-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.insta-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e1306c;
+  padding: 2px;
+}
+
+.insta-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.insta-username {
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+}
+
+.insta-more {
+  color: #262626;
+  cursor: pointer;
+}
+
+.insta-photo-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #fafafa;
+}
+
+.insta-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.insta-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px 8px;
+}
+
+.insta-action-left {
+  display: flex;
+  gap: 16px;
+}
+
+.action-icon {
+  color: #262626;
+  cursor: pointer;
+}
+
+.insta-likes {
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+  margin-bottom: 6px;
+}
+
+.insta-caption {
+  padding: 0 16px 16px;
+  font-size: 14px;
+  color: #262626;
+  line-height: 1.4;
+}
+
+.insta-caption .insta-username {
+  margin-right: 6px;
+}
+
+.contest-rules-section {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.rules-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-blue, #005f9e);
+  margin-bottom: 40px;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .rules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .rules-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.rule-card {
+  background: #f8fbff;
+  border: 1px solid #e1eeff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.rule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 95, 158, 0.1);
+  border-color: var(--primary-blue, #005f9e);
+}
+
+.rule-icon {
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue, #005f9e);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.rule-card p {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
