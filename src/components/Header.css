@@ -152,11 +152,29 @@
   display: none;
   background: none;
   color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  padding: 4px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(36, 67, 105, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
   
   .header-actions .btn-primary span {
@@ -165,5 +183,9 @@
   
   .mobile-menu-btn {
     display: block;
+  }
+
+  .weather-widget {
+    display: none !important;
   }
 }

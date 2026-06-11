@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Ticket, Menu, Globe, Sun, Waves, Droplets } from 'lucide-react';
+import { ShoppingCart, Ticket, Menu, Globe, Sun, Waves, Droplets, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useCart } from '../context/CartContext';
 import './Header.css';
@@ -7,6 +8,9 @@ import './Header.css';
 export default function Header() {
   const { t, language, setLanguage } = useLanguage();
   const { cart } = useCart();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <header className="header-container">
@@ -19,11 +23,11 @@ export default function Header() {
           </div>
         </Link>
         
-        <nav className="nav-links">
-          <Link to="/" className="nav-item">{t('nav_park')}</Link>
-          <Link to="/events" className="nav-item">{t('nav_events')}</Link>
-          <Link to="/tickets" state={{ resetCart: true }} className="nav-item">{t('nav_tickets')}</Link>
-          <a href="#footer" className="nav-item">{t('nav_infos')}</a>
+        <nav className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <Link to="/" className="nav-item" onClick={closeMenu}>{t('nav_park')}</Link>
+          <Link to="/events" className="nav-item" onClick={closeMenu}>{t('nav_events')}</Link>
+          <Link to="/tickets" state={{ resetCart: true }} className="nav-item" onClick={closeMenu}>{t('nav_tickets')}</Link>
+          <a href="#footer" className="nav-item" onClick={closeMenu}>{t('nav_infos')}</a>
         </nav>
         
         <div className="header-actions">
@@ -57,12 +61,12 @@ export default function Header() {
             {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
           </Link>
           
-          <Link to="/tickets" state={{ resetCart: true }} className="btn-primary">
+          <Link to="/tickets" state={{ resetCart: true }} className="btn-primary" style={{ whiteSpace: 'nowrap' }}>
             <Ticket size={20} />
-            {t('btn_book')}
+            <span>{t('btn_book')}</span>
           </Link>
-          <button className="mobile-menu-btn">
-            <Menu size={24} />
+          <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
