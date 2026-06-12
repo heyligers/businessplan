@@ -190,7 +190,7 @@ export default function Tickets() {
                                 <div key={ticket.id} className="person-row" style={{ padding: '12px 0', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
                                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                                     <span className="person-label" style={{ fontWeight: '600', color: 'var(--primary-blue)' }}>{ticket.label}</span>
-                                    <span style={{ fontSize: '0.9rem', color: '#666' }}>{formatPrice(ticket.price)} pro Ticket</span>
+                                    <span style={{ fontSize: '0.9rem', color: '#666' }}>{formatPrice(ticket.price)} {t('per_ticket')}</span>
                                   </div>
                                   <div className="counter-controls">
                                     <button onClick={() => updateTicketCount(ticket.id, -1)}><Minus size={14}/></button>

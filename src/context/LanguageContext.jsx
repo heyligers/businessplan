@@ -40,6 +40,7 @@ const translations = {
     total: "Gesamt",
     price_adult_child: "Erw. / Kind",
     from: "Ab",
+    per_ticket: "pro Ticket",
     
     // Details
     detail_experience: "Das Erlebnis",
@@ -174,6 +175,7 @@ const translations = {
     total: "Total",
     price_adult_child: "Adult / Child",
     from: "From",
+    per_ticket: "per Ticket",
 
     detail_experience: "The Experience",
     detail_equipment: "Equipment",
@@ -306,6 +308,7 @@ const translations = {
     total: "Toplam",
     price_adult_child: "Yetişkin / Çocuk",
     from: "İtibaren",
+    per_ticket: "Bilet başına",
 
     detail_experience: "Deneyim",
     detail_equipment: "Ekipman",
