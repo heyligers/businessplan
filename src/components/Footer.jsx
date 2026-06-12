@@ -11,8 +11,8 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="footer-logo">
-            <Droplets size={32} color="#F6C845" />
-            <h2>Europa-Park Istanbul</h2>
+            <img src="/images/logo_round.jpg" alt="Aquarena Istanbul" style={{ width: '48px', height: '48px', borderRadius: '50%' }} />
+            <h2>Aquarena Istanbul</h2>
           </div>
           <p>{t('footer_desc')}</p>
           <div className="social-links">
@@ -47,11 +47,11 @@ export default function Footer() {
           <Link to="/legal/impressum">Impressum</Link>
           <Link to="/legal/datenschutz">Datenschutz</Link>
           <Link to="/legal/agb">AGB</Link>
-          <a href="mailto:info@europapark-istanbul.com">Kontakt</a>
+          <a href="mailto:info@aquarena-istanbul.com">Kontakt</a>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Europa-Park Istanbul. Alle Rechte vorbehalten.</p>
+        <p>&copy; {new Date().getFullYear()} Aquarena Istanbul. Alle Rechte vorbehalten.</p>
       </div>
     </footer>
   );

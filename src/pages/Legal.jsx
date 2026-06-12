@@ -15,7 +15,7 @@ export default function Legal() {
             <div className="legal-block">
               <h2>Angaben gemäß § 5 TMG</h2>
               <p>
-                Europa-Park Istanbul Su Parkı A.Ş.<br />
+                Aquarena Istanbul Su Parkı A.Ş.<br />
                 Florya Güneş Plajı, Şenlikköy, Florya Sahil Yolu<br />
                 34153 Bakırköy/İstanbul<br />
                 Türkei
@@ -44,7 +44,7 @@ export default function Legal() {
 
               <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
               <p>
-                Direktion Europa-Park Istanbul<br />
+                Direktion Aquarena Istanbul<br />
                 Florya Güneş Plajı, 34153 Istanbul
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function Legal() {
             <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
             <div className="legal-block">
               <h2>§ 1 Geltungsbereich</h2>
-              <p>Diese Geschäftsbedingungen gelten für alle Verträge über den Erwerb von Tickets und die Nutzung der Wasserattraktionen (Jetski, Wibit, SUP, Tretboot) des Europa-Park Istanbul am Florya Güneş Strand.</p>
+              <p>Diese Geschäftsbedingungen gelten für alle Verträge über den Erwerb von Tickets und die Nutzung der Wasserattraktionen (Jetski, Wibit, SUP, Tretboot) des Aquarena Istanbul am Florya Güneş Strand.</p>
 
               <h2>§ 2 Vertragsschluss</h2>
               <p>Der Vertrag kommt durch die Annahme der Online-Buchung durch uns zustande. Der Kunde erhält nach erfolgreicher (Demo-)Zahlung eine Bestätigung.</p>

@@ -10,7 +10,7 @@ export default function ParkMap() {
         <p style={{ color: '#666', marginBottom: '40px', fontSize: '1.1rem' }}>{t('map_desc')}</p>
         
         <div className="map-container" style={{ borderRadius: 'var(--radius-sm)', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.1)' }}>
-          <img src="/images/park_map_florya_v2.png" alt="Europa-Park Istanbul Map" style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <img src="/images/park_map_florya_v2.png" alt="Aquarena Istanbul Map" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
       </div>
     </div>

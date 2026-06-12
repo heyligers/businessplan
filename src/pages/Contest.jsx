@@ -23,7 +23,7 @@ export default function Contest() {
                 <div className="insta-avatar">
                   <img src="/images/roxen_ref.png" alt="Avatar" />
                 </div>
-                <span className="insta-username">Europa-Park Istanbul</span>
+                <span className="insta-username">Aquarena Istanbul</span>
               </div>
               <MoreHorizontal size={20} className="insta-more" />
             </div>
@@ -40,7 +40,7 @@ export default function Contest() {
             </div>
             <div className="insta-likes">Gefällt 15.420 Mal</div>
             <div className="insta-caption">
-              <span className="insta-username">Europa-Park Istanbul</span> Macht mit beim großen Gewinnspiel! 🌊🎢
+              <span className="insta-username">Aquarena Istanbul</span> Macht mit beim großen Gewinnspiel! 🌊🎢
             </div>
           </div>
         </div>

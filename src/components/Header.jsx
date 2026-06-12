@@ -15,12 +15,8 @@ export default function Header() {
   return (
     <header className="header-container">
       <div className="header-inner">
-        <Link to="/" className="logo-section">
-          <div className="logo-icon"><Droplets size={32} /></div>
-          <div className="logo-text">
-            <span className="logo-title">Europa-Park Istanbul</span>
-            <span className="logo-subtitle">Resort & Water Fun</span>
-          </div>
+        <Link to="/" className="logo-section" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/images/logo_wide.jpg" alt="Aquarena Istanbul" style={{ height: '50px', width: 'auto', borderRadius: '8px' }} />
         </Link>
         
         <nav className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
