@@ -42,17 +42,17 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <HeroSection />
-      
-      <div style={{ background: 'linear-gradient(90deg, var(--accent-gold), #e6b830)', padding: '24px', textAlign: 'center', color: '#1a1a1a', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', position: 'relative', zIndex: 10 }}>
-        <h3 style={{ margin: '0 0 8px 0', fontSize: '1.5rem', fontWeight: '800' }}>🎉 {t('contest_title')}</h3>
-        <p style={{ margin: 0, fontSize: '1.1rem', fontWeight: '500' }}>
+      <div style={{ position: 'absolute', top: '74px', left: 0, width: '100%', background: 'linear-gradient(90deg, var(--accent-gold), #e6b830)', padding: '12px 24px', textAlign: 'center', color: '#1a1a1a', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', zIndex: 100 }}>
+        <h3 style={{ margin: '0 0 4px 0', fontSize: '1.2rem', fontWeight: '800' }}>🎉 {t('contest_title')}</h3>
+        <p style={{ margin: 0, fontSize: '1rem', fontWeight: '500' }}>
           {t('contest_subtitle')}
           <Link to="/contest" style={{ marginLeft: '12px', color: '#1a1a1a', textDecoration: 'underline', fontWeight: 'bold' }}>
             {t('btn_learn_more')} &rarr;
           </Link>
         </p>
       </div>
+
+      <HeroSection />
       
       <section className="attractions-section">
         <div className="section-header">
