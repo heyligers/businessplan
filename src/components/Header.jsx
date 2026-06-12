@@ -16,7 +16,7 @@ export default function Header() {
     <header className="header-container">
       <div className="header-inner">
         <Link to="/" className="logo-section" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/images/logo_wide.jpg" alt="Aquarena Istanbul" style={{ height: '50px', width: 'auto', borderRadius: '8px' }} />
+          <img src="/images/logo_wide.jpg" alt="Aquarena Istanbul" style={{ height: '50px', width: 'auto', borderRadius: '8px', transform: 'scale(1.4)', transformOrigin: 'left center' }} />
         </Link>
         
         <nav className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>

@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="footer-logo">
-            <img src="/images/logo_round.jpg" alt="Aquarena Istanbul" style={{ width: '48px', height: '48px', borderRadius: '50%' }} />
+            <img src="/images/logo_round.jpg" alt="Aquarena Istanbul" style={{ width: '48px', height: '48px', borderRadius: '50%', transform: 'scale(1.4)', transformOrigin: 'left center' }} />
             <h2>Aquarena Istanbul</h2>
           </div>
           <p>{t('footer_desc')}</p>
