@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const translations = {
   de: {
@@ -411,6 +411,18 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('en');
+  const [exchangeRate, setExchangeRate] = useState(53.40); // Fallback rate
+
+  useEffect(() => {
+    fetch('https://open.er-api.com/v6/latest/EUR')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.rates && data.rates.TRY) {
+          setExchangeRate(data.rates.TRY);
+        }
+      })
+      .catch(err => console.error("Failed to fetch exchange rate", err));
+  }, []);
 
   const t = (key) => {
     return translations[language][key] || key;
@@ -418,7 +430,7 @@ export const LanguageProvider = ({ children }) => {
 
   const formatPrice = (priceEur) => {
     if (language === 'tr') {
-      const priceTry = priceEur * 35.23;
+      const priceTry = priceEur * exchangeRate;
       return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }).format(priceTry);
     }
     return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(priceEur);
