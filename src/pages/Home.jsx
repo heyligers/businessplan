@@ -1,11 +1,11 @@
-﻿import HeroSection from '../components/HeroSection';
+import HeroSection from '../components/HeroSection';
 import AttractionCard from '../components/AttractionCard';
 import { Star } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import './Home.css';
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, formatPrice } = useLanguage();
 
   const attractions = [
     {
@@ -13,28 +13,29 @@ export default function Home() {
       title: t('attr_1_title'),
       description: t('attr_1_desc'),
       image: "/images/wibit.png",
-      price: `${t('from')} 13,00 €`
+      priceNum: 13,
+      isFrom: true
     },
     {
       id: 2,
       title: t('attr_2_title'),
       description: t('attr_2_desc'),
       image: "/images/jetski.png",
-      price: "70,00 €"
+      priceNum: 70
     },
     {
       id: 3,
       title: t('attr_3_title'),
       description: t('attr_3_desc'),
       image: "/images/sup.png",
-      price: "8,00 €"
+      priceNum: 8
     },
     {
       id: 4,
       title: t('attr_4_title'),
       description: t('attr_4_desc'),
       image: "/images/pedalboat.png",
-      price: "12,00 €"
+      priceNum: 12
     }
   ];
 
@@ -56,7 +57,7 @@ export default function Home() {
               title={attr.title}
               description={attr.description}
               image={attr.image}
-              price={attr.price}
+              price={attr.isFrom ? `${t('from')} ${formatPrice(attr.priceNum)}` : formatPrice(attr.priceNum)}
             />
           ))}
         </div>

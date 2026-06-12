@@ -410,8 +410,16 @@ export const LanguageProvider = ({ children }) => {
     return translations[language][key] || key;
   };
 
+  const formatPrice = (priceEur) => {
+    if (language === 'tr') {
+      const priceTry = priceEur * 35.23;
+      return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }).format(priceTry);
+    }
+    return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(priceEur);
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, formatPrice }}>
       {children}
     </LanguageContext.Provider>
   );

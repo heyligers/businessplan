@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { CheckCircle2, Ticket, Calendar, Clock, CreditCard, ShoppingCart, Trash2, Plus, Minus, Settings2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -6,7 +6,7 @@ import { useCart } from '../context/CartContext';
 import './Tickets.css';
 
 export default function Tickets() {
-  const { t } = useLanguage();
+  const { t, formatPrice } = useLanguage();
   const { cart, addToCart, removeFromCart, clearCart, cartTotal, bookingDate, setBookingDate } = useCart();
   const [step, setStep] = useState(1);
   const location = useLocation();
@@ -190,7 +190,7 @@ export default function Tickets() {
                                 <div key={ticket.id} className="person-row" style={{ padding: '12px 0', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
                                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                                     <span className="person-label" style={{ fontWeight: '600', color: 'var(--primary-blue)' }}>{ticket.label}</span>
-                                    <span style={{ fontSize: '0.9rem', color: '#666' }}>{ticket.price}€ pro Ticket</span>
+                                    <span style={{ fontSize: '0.9rem', color: '#666' }}>{formatPrice(ticket.price)} pro Ticket</span>
                                   </div>
                                   <div className="counter-controls">
                                     <button onClick={() => updateTicketCount(ticket.id, -1)}><Minus size={14}/></button>
@@ -205,7 +205,7 @@ export default function Tickets() {
                           <div className="config-footer">
                             <div className="calc-price-box">
                               <span className="calc-label">{t('total_calc')}</span>
-                              <span className="calc-amount">{calculateCurrentPrice(attr)}€</span>
+                              <span className="calc-amount">{formatPrice(calculateCurrentPrice(attr))}</span>
                             </div>
                             <button 
                               className="btn-primary" 
@@ -246,7 +246,7 @@ export default function Tickets() {
                           <p className="cart-item-desc">{item.desc}</p>
                         </div>
                         <div className="cart-item-right">
-                          <span className="cart-item-price">{item.price}€</span>
+                          <span className="cart-item-price">{formatPrice(item.price)}</span>
                           <button className="btn-icon" onClick={() => removeFromCart(item.cartId)} title={t('remove')}>
                             <Trash2 size={20} />
                           </button>
@@ -256,7 +256,7 @@ export default function Tickets() {
                   </div>
                   <div className="cart-total-box">
                     <span>{t('total')}:</span>
-                    <span className="total-amount">{cartTotal}€</span>
+                    <span className="total-amount">{formatPrice(cartTotal)}</span>
                   </div>
                   <div className="form-actions right">
                     <button className="btn-primary" onClick={() => setStep(3)}>{t('btn_checkout')}</button>
@@ -289,7 +289,7 @@ export default function Tickets() {
               <h2><CreditCard size={24} /> {t('step4')}</h2>
               <p className="payment-demo-text">Dies ist eine Simulation. Die Buchung wird sofort bestätigt.</p>
               <div className="total-price">
-                {t('total')}: <span>{cartTotal}€</span>
+                {t('total')}: <span>{formatPrice(cartTotal)}</span>
               </div>
               <div className="form-actions spread">
                 <button className="btn-text" onClick={() => setStep(3)}>Zurück</button>
