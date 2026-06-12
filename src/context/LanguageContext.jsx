@@ -430,8 +430,8 @@ export const LanguageProvider = ({ children }) => {
 
   const formatPrice = (priceEur) => {
     if (language === 'tr') {
-      const priceTry = priceEur * exchangeRate;
-      return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }).format(priceTry);
+      const priceTry = Math.round(priceEur * exchangeRate);
+      return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY', maximumFractionDigits: 0 }).format(priceTry);
     }
     return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(priceEur);
   };
