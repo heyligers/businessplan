@@ -410,7 +410,7 @@ const translations = {
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('de');
+  const [language, setLanguage] = useState('en');
 
   const t = (key) => {
     return translations[language][key] || key;
